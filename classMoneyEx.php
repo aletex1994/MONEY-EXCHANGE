@@ -8,7 +8,7 @@ class MoneyEx{
 
     public static function now($moneta){
         $risultato=new static();
-        $url = "https://freecurrencyapi.net/api/v2/latest?apikey=3d5afcd0-839c-11ec-870a-dbfb92cfaeb6&base_currency=$moneta";
+        $url = "https://freecurrencyapi.net/api/v2/latest?apikey=xxxxxxxxxxxxxxxxxxx&base_currency=$moneta";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -68,13 +68,11 @@ class MoneyEx{
 }
 
 
-$val="EUR";
-$cambio="USD";
-$dataOK="2022-01-01";
 
-$try2 = MoneyEx::now($val);
 
-echo $try2->decodificaRisultato($cambio);
+//$try2 = MoneyEx::now($val);
+
+//echo $try2->decodificaRisultato($cambio);
 
 
 
